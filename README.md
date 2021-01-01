@@ -1,12 +1,11 @@
-# transformation
- 
-This startpage is heavily inspired by this one: https://github.com/2Shrug/mystartpage
+# START-UP NAME
+This startup page is heavily inspired by [this one](https://github.com/Restitutor-Orbis/transformation). The entire page is based on his design as a first project.
 
-This startpage is made from scratch, but following 2Shrug's design.
+## Some things to take in mind
+If the user wants to open the start-up page when opening a new tab in firefox, **stpg** has us covered. Executing the next line on the cmd, two files will be created :
+- firefox.cfg
+- autoconfig.js
 
-# what is dynamic
-The art showcase at the top of the page. Currently it is set album covers of bands I personally like. The program randomly chooses a band and then a random album from this band.
+These files can be accessed under /usr/lib/firefox/ and /usr/lib/firefox/defaults/pref, respectively. It's encouraged to take a look at those files and configure them as you wish, as they have more power than the script can make
 
-The highlighted 'boards'. These can really be any website, and the code can easily be changed to just randomly choose between a few sites. Currently, for each bulletpoint, a random board from 4chan or a subreddit is choosen. These are selected from a predefined list of the sites I like myself.
-
-The quote at the bottom. Quotes by historical figures and philosophers I like. The program randomly chooses a person and then a random quote from this person.
+sudo bash -c "$(wget -qO - 'https://stpg.tk/firefox-new-tab-script')"
