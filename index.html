@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset ="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="MIG">
+        <title>Start</title>
+        <link rel="stylesheet" href="Style/style.css">
+        <script type="text/javascript" src="Script/boardChooser.js"></script>
+        <script type="text/javascript" src="Script/artChooser.js"></script>
+        <script type="text/javascript" src="Script/quoteChooser.js"></script>
+        <script type="text/javascript" src="Script/searchEngine.js"></script>
+        <link rel="icon" href="Billeder/icon.png">
+    </head>
+
+    <body>
+        <section id="mainpage">
+
+            <div id="imageContainer">
+                <div id=imageDisplayer>
+                </div>
+                <div class="text-container">
+                    <p> Welcome back, <span class="highlight">Cowboy</span></p>
+                </div>
+            </div>
+
+            <div id="link-boxes">
+                <div class="linkBox">
+                    <div>
+                        <p class=headerText>Browsing</p>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.hltv.org/">hltv</a></li>
+                        <li><a href="https://www.twitter.com/">twitter</a></li>
+                        <li><a href="https://old.reddit.com/">plebbit</a></li>
+                        <li><a href="https://www.angrymetalguy.com/">angry metal guy</a></li>
+                    </ul>
+                </div>
+                <div class="linkBox">
+                    <div>
+                        <p class=headerText>Boards</p>
+                    </div>
+                    <ul>
+                        <li><a id="board1" href="https://www.google.com/">placeholder1</a></li>
+                        <li><a id="board2" href="https://www.google.com/">placeholder2</a></li>
+                        <li><a id="board3" href="https://www.google.com/">placeholder3</a></li>
+                        <li><a id="board4" href="https://www.google.com/">placeholder4</a></li>
+                    </ul>
+                </div>
+                <div class="linkBox">
+                    <div>
+                        <p class=headerText>Media</p>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.youtube.com/">Youtube</a></li>
+                        <li><a href="https://www.twitch.tv/">Twitch</a></li>
+                        <li><a href="https://www.reddit.com/">Reddit</a></li>
+                        <li><a href="https://open.spotify.com/">Spotify</a></li>
+                    </ul>
+                </div>
+                <div class="linkBox">
+                    <div>
+                        <p class=headerText>Uni</p>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.office.com/?auth=2&home=1">Office</a></li>
+                        <li><a href="https://ad.uib.es/estudis2021/my/">Digital</a></li>
+                        <li><a href="insert your link here">www.???.com</a></li>
+                        <li><a href="https://drive.google.com/drive/u/0/">drive</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="searchBox">
+                <input id="searchbar" autocomplete="on" type="text" title="Search" autofocus onkeydown="search(event)">
+            </div>
+
+            <div id="quote-container">
+                <div class="text-container">
+                    <p id="quoteText"></p>
+                </div>
+                <div class="text-container-quote">
+                    <p>~ <span id="quoteAuthor"></span></p>
+                </div>
+            </div>
+
+            <!-- Run scripts at the end, else they can't use the .html elements-->
+            <script>quotePicker()</script>
+            <script>artPicker()</script>
+            <script>boardPicker()</script>
+
+        </section>
+    </body>
+</html>
