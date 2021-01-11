@@ -7,24 +7,23 @@
 // 3. These are all hardcoded, so make sure you get the file-name and -type correct 
 
 function artPicker() {
-    var folders = getFolders(); 
-    var artists = getArtists(); 
-    
-    var folder = pickFolder(folders); 
-    var artist = pickArtist(artists); 
+    var folder = pickFolder(); 
+    var artist = pickArtist(); 
  
     var image = pickImage(artist); //randomly picks an image from the given arist
  
     updateImageDisplay(image, folder) //updates UI elements
 }
 
-function pickFolder(folders) {
+function pickFolder() {
+    var folders = getFolders();
     var choosenFolder = Math.floor((Math.random() * folders.length)); 
 
     return folders[choosenFolder];
 }
 
-function pickArtist(artists) {   
+function pickArtist() {   
+    var artists = getArtists();
     var choosenArtist = Math.floor((Math.random() * artists.length)); 
 
     return artists[choosenArtist];

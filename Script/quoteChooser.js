@@ -6,8 +6,7 @@
 // 3. You can add as many authors and quotes as you'd like. I don't know when/if performance starts to drop significantly.
 
 function quotePicker() {
-   var authors = getAuthors(); 
-   var author = pickAuthor(authors);
+   var author = pickAuthor();
    var quote = pickQuote(author); 
 
    updateDisplay(author, quote) //updates UI elements
@@ -20,8 +19,8 @@ function getAuthors() {
     "Christopher Columbus", "Albert Camus", "Archer", "Shirou Emiya", "Kirei Kotomine", "Cowboy Bebop"];
 }
 
-function pickAuthor(authors) {
-
+function pickAuthor() {
+    var authors = getAuthors();
     var choosen = Math.floor((Math.random() * authors.length));    
 
     return authors[choosen];
