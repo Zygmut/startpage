@@ -29,29 +29,27 @@ function generateRandomBoard(platform) {
 
     switch(platform) {
         case("reddit"):
-            boards.push("cyberpunkgame");
-            boards.push("lowsodiumcyberpunk");
-            boards.push("roughromanmemes");
-            boards.push("drama");
-            boards.push("forsen");
-            boards.push("desktops");
+            boards.push("unixporn");
+            boards.push("nextfuckinglevel");
+            boards.push("WTF");
+            boards.push("grandorder");
+            boards.push("aww");
+            boards.push("Whatcouldgowrong");
             boards.push("startpages");
-            boards.push("LoveForScaplers");
-            boards.push("LoveForLandlords");
-            boards.push("ArchitectualRevival");
             boards.push("IdiotsInCars");
             boards.push("VaporwaveAesthetics");
-            boards.push("4chan");
             boards.push("greentexts");
-            boards.push("bookscirclejerk");
-            boards.push("ancientrome");
-            boards.push("paranormal");
-            boards.push("powermetal");
-            boards.push("melodicdeathmetal");
-            boards.push("worldjerking");
-            boards.push("stupidpol");
-            boards.push("spqrposting");
-            boards.push("metal");
+            boards.push("assholedesign");
+            boards.push("collguides");
+            boards.push("medizzy");
+            boards.push("raspberry_pi");
+            boards.push("researchchemicals");
+            boards.push("algotrading");
+            boards.push("Python");
+            boards.push("DesignPorn");
+            boards.push("minimalism");
+            boards.push("ProgrammerHumor");
+            boards.push("softwaregore")
             break;
 
         case("chan"):
