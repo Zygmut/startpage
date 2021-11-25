@@ -34,20 +34,20 @@ function pickImage(artist) {
     var images = [];
     switch(artist) {
         case("Aephanemer"):
-            images.push("aephanemer_prokopton.jpg");
-            break;
+            return "aephanemer_prokopton.jpg";
+            // break;
 
         case("Afsky"):
-            images.push("afsky_oftedød.jpg");
-            break;
+            return "afsky_oftedød.jpg";
+            // break;
         
         case("Alcest"):
-            images.push("alcest_spiritual.jpg");
-            break;
+            return "alcest_spiritual.jpg";
+            // break;
         
         case("Arch Enemy"):
-            images.push("archenemy_willpower.jpg");
-            break;
+            return "archenemy_willpower.jpg";
+            // break;
         
         case("Battle Beast"):
             images.push("battlebeast_pain.jpg");
@@ -55,8 +55,8 @@ function pickImage(artist) {
             break;
         
         case("Hinayana"):
-            images.push("hinayana_cosmic.jpg");
-            break;
+            return "hinayana_cosmic.jpg";
+            // break;
         
         case("Myrkur"):
             images.push("myrkur_folkesange.jpg");
@@ -64,8 +64,8 @@ function pickImage(artist) {
             break;
 
         case("Visions of Atlantis"):
-            images.push("visionsatlantis_wanderers.jpg");
-            break;
+            return "visionsatlantis_wanderers.jpg";
+            // break;
 
         case("Wuthering Heights"):
             images.push("wuthering_farfrom.jpg");

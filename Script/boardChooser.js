@@ -31,24 +31,23 @@ function generateRandomBoard(platform) {
         case("reddit"):
             boards.push("unixporn");
             boards.push("nextfuckinglevel");
-            boards.push("WTF");
+            boards.push("wtf");
             boards.push("grandorder");
             boards.push("aww");
-            boards.push("Whatcouldgowrong");
+            boards.push("whatcouldgowrong");
             boards.push("startpages");
-            boards.push("IdiotsInCars");
-            boards.push("VaporwaveAesthetics");
+            boards.push("idiotsincars");
+            boards.push("vaporwaveaesthetics");
             boards.push("greentexts");
             boards.push("assholedesign");
-            boards.push("collguides");
+            boards.push("coolguides");
             boards.push("medizzy");
             boards.push("raspberry_pi");
             boards.push("researchchemicals");
-            boards.push("algotrading");
-            boards.push("Python");
-            boards.push("DesignPorn");
+            boards.push("python");
+            boards.push("designporn");
             boards.push("minimalism");
-            boards.push("ProgrammerHumor");
+            boards.push("programmerhumor");
             boards.push("softwaregore")
             break;
 
