@@ -1,0 +1,51 @@
+:root {
+    --text-color: white;
+    --background-color: #212121;
+    --primary-color: #2E2E2E;
+    --secondary-color: #9E9E9E;
+    --highlight-color: #9D7139;
+}
+
+body {
+    background: var(--background-color);
+    font-family: consolas, monospace, sans-serif;
+}
+
+#searchbar{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-indent: 1rem;
+}
+
+#searchbar:focus{
+    outline: none;
+}
+
+.card{
+    background-color: var(--primary-color);
+}
+
+.list-group-item a{
+    color: var(--secondary-color);
+}
+
+h1{
+    color: var(--text-color);
+}
+
+.fun * {
+    color: red;
+}
+
+.fun a:hover{
+    color: inherit;
+    transition: color 0.1s ease-in
+}
+
+.dev {
+    color: cyan;
+}
+
+.work {
+    color: greenyellow;
+}
