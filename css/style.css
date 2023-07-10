@@ -33,6 +33,10 @@ i {
     cursor: pointer
 }
 
+blockquote {
+    color: var(--secondary-color) ;
+}
+
 h1{
     color: var(--text-color);
 }

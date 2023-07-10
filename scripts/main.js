@@ -1,6 +1,9 @@
-window.onload = () => {
+// Powered by Quotable
+// https://github.com/lukePeavey/quotable
+
+document.addEventListener("DOMContentLoaded", () => {
 	this.setTitle();
-};
+});
 
 function setTitle() {
 	const currentTime = new Date();
@@ -23,6 +26,5 @@ function setTitle() {
 		return inRange(currentTimeDecimal, start, end);
 	}).message;
 
-	console.log(message);
 	document.getElementById("title").innerHTML = message;
 }
