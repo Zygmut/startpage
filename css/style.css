@@ -25,21 +25,20 @@ body {
     background-color: var(--primary-color);
 }
 
-.list-group-item a{
-    color: var(--secondary-color);
+.list-group-item * {
+    color: var(--secondary-color) ;
+}
+
+i {
+    cursor: pointer
 }
 
 h1{
     color: var(--text-color);
 }
 
-.fun * {
+.fun {
     color: red;
-}
-
-.fun a:hover{
-    color: inherit;
-    transition: color 0.1s ease-in
 }
 
 .dev {
@@ -48,4 +47,11 @@ h1{
 
 .work {
     color: greenyellow;
+}
+
+.fun *:hover,
+.dev *:hover,
+.work *:hover{
+    color: inherit ;
+    transition: color 0.1s ease-in
 }
