@@ -24,9 +24,9 @@ function generateCardCss(elem) {
         .${elem["title"]}{
             color: ${elem["color"]};
         }
-        .${elem["title"]} *:hover{
+        .${elem["title"]} *:hover {
             color: inherit;
-            transitioon: color 0.1s ease-in;
+            transition: color 0.1s ease-in;
         }`;
 }
 
