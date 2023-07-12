@@ -61,3 +61,7 @@ function generateLink(link) {
         <li class="p-0 list-group-item border-0 bg-transparent"><a class="text-decoration-none"
             href="${link["link"]}">${link["display"]}</a></li>`;
 }
+
+function generateShortcuts(json){
+    console.warn("[ cards.js ]: generateShortcuts(json) is not implemented yet");
+}
