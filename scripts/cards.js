@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", async () => {
-	const json = await fetch("cards.json")
+	const card_array = await fetch("cards.json")
 		.then((res) => res.text())
 		.then((content) => JSON.parse(content))
-		.catch((e) => ({}));
+		.catch((_e) => []);
 
-	this.generateCSS(json);
-	this.generateHTML(json);
-	this.generateShortcuts(json);
+	this.generateCSS(card_array);
+	this.generateHTML(card_array);
+	this.generateShortcuts(card_array);
 });
 
 function generateCSS(array) {
