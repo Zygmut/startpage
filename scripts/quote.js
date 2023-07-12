@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	const quote = await fetch("quotes.json")
 		.then((res) => res.text())
 		.then((content) => JSON.parse(content))
-		.then((json) => this.randomElem(json["quotes"]))
+		.then((json) => this.randomElem(json))
 		.catch((_e) => ({
 			quote: "We suffer more often in imagination than in reality",
 			author: "Lucius Annaeus Seneca",
