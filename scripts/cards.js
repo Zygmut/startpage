@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", async () => {
-	const json = await fetch("settings.json")
+	const json = await fetch("cards.json")
 		.then((res) => res.text())
-		.then((content) => JSON.parse(content));
+		.then((content) => JSON.parse(content))
+		.catch((e) => ({}));
 
 	this.generateCSS(json);
 	this.generateHTML(json);
 	this.generateShortcuts(json);
 });
 
-function generateCSS(json) {
+function generateCSS(array) {
 	let style = document.createElement("style");
 
-	style.innerHTML = Array.from(json["link-boxes"])
+	style.innerHTML = array
 		.map((elem) => this.generateCardCss(elem))
 		.join("\n");
 
@@ -30,9 +31,9 @@ function generateCardCss(elem) {
         }`;
 }
 
-function generateHTML(json) {
+function generateHTML(array) {
 	const link_boxes = document.getElementById("link-boxes");
-	link_boxes.innerHTML = Array.from(json["link-boxes"])
+	link_boxes.innerHTML = array
 		.map((elem) => generateCardHtml(elem))
 		.join("\n");
 }
@@ -62,6 +63,8 @@ function generateLink(link) {
             href="${link["link"]}">${link["display"]}</a></li>`;
 }
 
-function generateShortcuts(json){
-    console.warn("[ cards.js ]: generateShortcuts(json) is not implemented yet");
+function generateShortcuts(json) {
+	console.warn(
+		"[ cards.js ]: generateShortcuts(json) is not implemented yet"
+	);
 }
