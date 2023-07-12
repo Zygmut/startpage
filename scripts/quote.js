@@ -1,22 +1,21 @@
 // Powered by Quotable
 // https://github.com/lukePeavey/quotable
 
-document.addEventListener("DOMContentLoaded", async () => {
-	await this.updateQuote();
+document.addEventListener("DOMContentLoaded", () => {
+	fetch("quotes.json")
+		.then((res) => res.text())
+		.then((content) => JSON.parse(content))
+		.then((json) => this.randomElem(json["quotes"]))
+		.then((elem) => this.updateQuote(elem["quote"], elem["author"]))
+		.catch((e) => this.updateQuote("We suffer more often in imagination than in reality", "Lucius Annaeus Seneca"));
+	this.updateQuote();
 });
 
-async function updateQuote() {
-	const data = await fetch(
-		"https://api.quotable.io/quotes?tags=sadness|philosophy|pain|leadership|ethics"
-	)
-		.then((response) => response.json())
-		.then((json) => json["results"])
-		.then((content) =>
-			Array.from(content).map((elem) => [elem["content"], elem["author"]])
-		);
+function updateQuote(content, author) {
+	const quote_tag = document.getElementsByTagName("blockquote")[0];
+	quote_tag.innerHTML = `${content} <footer class="m-0 mt-2"><cite>${author}</cite></footer>`;
+}
 
-	const random_elem = data[Math.floor(Math.random() * data.length)];
-
-    let quote_tag = document.getElementsByTagName("blockquote")[0];
-    quote_tag.innerHTML = `${random_elem[0]} <footer><cite>${random_elem[1]}</cite></footer>`
+function randomElem(array) {
+	return array[Math.floor(Math.random() * array.length)];
 }
