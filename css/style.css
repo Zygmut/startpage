@@ -44,22 +44,3 @@ blockquote {
 h1{
     color: var(--text-color);
 }
-
-.fun {
-    color: red;
-}
-
-.dev {
-    color: cyan;
-}
-
-.work {
-    color: greenyellow;
-}
-
-.fun *:hover,
-.dev *:hover,
-.work *:hover{
-    color: inherit ;
-    transition: color 0.1s ease-in
-}
