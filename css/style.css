@@ -25,6 +25,10 @@ body {
     background-color: var(--primary-color);
 }
 
+.card-title{
+    font-size: 1.4rem;
+}
+
 .list-group-item * {
     color: var(--secondary-color) ;
 }
