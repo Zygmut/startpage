@@ -1,14 +1,14 @@
-// Powered by Quotable
-// https://github.com/lukePeavey/quotable
-
-document.addEventListener("DOMContentLoaded", () => {
-	fetch("quotes.json")
+document.addEventListener("DOMContentLoaded", async () => {
+	const quote = await fetch("quotes.json")
 		.then((res) => res.text())
 		.then((content) => JSON.parse(content))
 		.then((json) => this.randomElem(json["quotes"]))
-		.then((elem) => this.updateQuote(elem["quote"], elem["author"]))
-		.catch((e) => this.updateQuote("We suffer more often in imagination than in reality", "Lucius Annaeus Seneca"));
-	this.updateQuote();
+		.catch((_e) => ({
+			quote: "We suffer more often in imagination than in reality",
+			author: "Lucius Annaeus Seneca",
+		}));
+
+	this.updateQuote(quote["quote"], quote["author"]);
 });
 
 function updateQuote(content, author) {
