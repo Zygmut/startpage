@@ -9,6 +9,16 @@
 body {
     background: var(--background-color);
     font-family: consolas, monospace, sans-serif;
+    color: var(--text-color)
+}
+
+body.hide * {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+body.show * {
+  opacity: 1;
 }
 
 #searchbar{
@@ -39,8 +49,4 @@ i {
 
 blockquote {
     color: var(--secondary-color) ;
-}
-
-h1{
-    color: var(--text-color);
 }
