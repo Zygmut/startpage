@@ -1,15 +1,37 @@
-const quickLinks = { g: "https://www.github.com" };
-
-document.addEventListener("DOMContentLoaded", () => {
-	this.enableSearch();
+document.addEventListener("DOMContentLoaded", async () => {
+	const quickLinks = await this.buildQuickLinks();
+	this.enableSearch(quickLinks);
 });
 
-function enableSearch() {
+async function buildQuickLinks() {
+	const shortcuts = await fetch("shortcuts.json")
+		.then((res) => res.text())
+		.then((content) => JSON.parse(content))
+		.catch((_e) => ({}));
+
+	const card_shortcuts = await fetch("cards.json")
+		.then((res) => res.text())
+		.then((content) => JSON.parse(content))
+		.then((shortcuts) =>
+			shortcuts.reduce((acc, card) => {
+				card.links.forEach((link) => {
+					acc[link.shortcut] = link.link;
+				});
+				return acc;
+			}, {})
+		)
+		.catch((_e) => ({}));
+
+	return Object.assign(shortcuts, card_shortcuts);
+}
+
+function enableSearch(quickLinks) {
+	console.log(quickLinks);
 	const searchbar = document.getElementById("searchbar");
 	searchbar.addEventListener("keydown", function (event) {
 		if (event.key == "Enter") {
 			event.preventDefault();
-			const text = document.getElementById("searchbar").value; //laver en string med forespørgslen
+			const text = document.getElementById("searchbar").value;
 
 			if (text == "") {
 				return;
