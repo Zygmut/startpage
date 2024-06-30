@@ -47,13 +47,13 @@
 		"links": [
 			{
 				"display": "letterbox",
-				"link": "https://www.letterbox.com",
+				"link": "https://letterboxd.com/",
 				"shortcut": "lb"
 			},
 			{
-				"display": "9anime",
-				"link": "https://www.9anime.to",
-				"shortcut": "a"
+				"display": "tldr",
+				"link": "https://tldr.tech/",
+				"shortcut": "td"
 			},
 			{
 				"display": "youtube",
